@@ -1,12 +1,39 @@
 {
-  "name": "better-returns",
-  "module": "index.ts",
-  "type": "module",
-  "private": true,
-  "devDependencies": {
-    "@types/bun": "latest"
-  },
-  "peerDependencies": {
-    "typescript": "^5"
-  }
+	"$schema": "https://json.schemastore.org/package.json",
+	"name": "better-returns",
+	"author": "soulsam480<soulsam480@hotmail.com>",
+	"type": "module",
+	"private": false,
+	"version": "0.1.0",
+	"description": "gleam option and result implemented in TypeScript.",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/soulsam480/better-returns"
+	},
+	"exports": {
+		"./option": {
+			"types": "./dist/option.d.ts",
+			"import": "./dist/option.js"
+		},
+		"./result": {
+			"types": "./dist/result.d.ts",
+			"import": "./dist/result.js"
+		}
+	},
+	"files": [
+		"dist",
+		"package.json",
+		"README.md"
+	],
+	"scripts": {
+		"docs": "bunx typedoc --entryPointStrategy Expand src",
+		"build": "bun run build.mjs"
+	},
+	"devDependencies": {
+		"@types/bun": "latest",
+		"bun-plugin-dts": "^0.3.0"
+	},
+	"peerDependencies": {
+		"typescript": "^5"
+	}
 }

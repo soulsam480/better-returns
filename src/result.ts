@@ -17,7 +17,7 @@ type Ok<T> = { readonly type: "ok"; value: T };
  * @template T - The type of the successful value.
  * @template E - The type of the error value.
  */
-type Result<T, E> = Ok<T> | Err<E>;
+export type Result<T, E> = Ok<T> | Err<E>;
 
 /**
  * Creates an `Ok` result containing the given value.
