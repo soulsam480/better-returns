@@ -1,7 +1,7 @@
 export {
 	type Option,
-	Some,
-	None,
+	some,
+	none,
 	is_some,
 	is_none,
 	map,
